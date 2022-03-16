@@ -1,0 +1,22 @@
+version: '3'
+
+services:
+  localstack:
+    image: localstack/localstack
+    network_mode: bridge
+    ports:
+      - "4510-4559:4510-4559"
+      - "4566:4566"
+      - "8080:8080" # Web UI 
+    environment:
+      - DATA_DIR=/tmp/localstack/data
+      - DEBUG=1
+      - DOCKER_HOST=unix:///var/run/docker.sock
+      - PORT_WEB_UI=8080
+      - AWS_ACCESS_KEY_ID=access-key-id
+      - AWS_SECRET_ACCESS_KEY=secret-access-key
+      - LAMBDA_DOCKER_NETWORK=host
+      - LAMBDA_EXECUTOR=docker
+    volumes:
+      - "${TMPDIR:-/tmp/localstack}:/tmp/localstack"
+      - "/var/run/docker.sock:/var/run/docker.sock"

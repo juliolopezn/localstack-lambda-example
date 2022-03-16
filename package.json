@@ -1,0 +1,29 @@
+{
+  "name": "localstack-lambda-example",
+  "version": "1.0.0",
+  "description": "Kick start AWS Lambda function with Localstack",
+  "main": "index.js",
+  "scripts": {
+    "zip": "bestzip index.zip index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JulioLopezN/localstack-lambda-example.git"
+  },
+  "keywords": [
+    "LocalStack",
+    "AWS",
+    "Lambda",
+    "NodeJS"
+  ],
+  "author": "Julio López",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JulioLopezN/localstack-lambda-example/issues"
+  },
+  "homepage": "https://github.com/JulioLopezN/localstack-lambda-example#readme",
+  "devDependencies": {
+    "bestzip": "^2.2.0"
+  }
+}
